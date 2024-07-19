@@ -62,7 +62,9 @@
       <section class="section hero-section">
         <div class="container">
           <h1 class="main-page-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="btn">Order Service</button>
+          <button type="button" class="btn" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <!--features-->
@@ -492,9 +494,9 @@
         </div>
       </div>
     </footer>
-    <div class="modal-overlay is-open">
+    <div class="modal-overlay" data-modal>
       <div class="modal">
-        <button class="modal-close-btn" type="button">
+        <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="modal-close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -561,18 +563,20 @@
               value="true"
             />
             <label class="modal-form-descr" for="user-privacy"
-              >I accept the terms and conditions of the
-              <span class="modal-form-descr-part">
+              ><span class="modal-chek">
                 <svg class="chek-mark-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-chek-mark"></use>
                 </svg>
-                Privacy Policy
               </span>
+              I accept the terms and conditions of the
+              <a class="modal-link" href="">Privacy Policy</a>
             </label>
           </div>
           <button class="modal-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

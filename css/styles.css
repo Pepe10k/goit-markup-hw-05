@@ -654,7 +654,6 @@ img {
 }
 
 .form-icon {
-  fill: #2e2f42;
   position: absolute;
   left: 16px;
   top: 50%;
@@ -662,7 +661,7 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:focus .form-icon {
+.modal-input:focus + .form-icon {
   fill: #4d5ae5;
 }
 
@@ -699,7 +698,7 @@ img {
   border: 1px solid rgba(46, 47, 66, 0.4);
 }
 
-.form-checkbox:checked .modal-form-descr-part {
+.form-checkbox:checked + .modal-form-descr > .modal-chek {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
@@ -712,22 +711,25 @@ img {
   color: #8e8f99;
 }
 
-.modal-form-descr-part {
+.modal-chek {
   width: 16px;
   height: 16px;
   line-height: 1.33333;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  color: #4d5ae5;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-link {
+  color: #4d5ae5;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
 }
 
 .modal-btn {
